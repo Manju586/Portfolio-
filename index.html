@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">Manju.</div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="home" class="header-content">
+            <div class="text-section">
+                <p class="subtitle">Web Designer</p>
+                <h1>Hi, I'm Manju</h1>
+                <h2>Welcome to My Website</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+<section id="about">
+    <div class="container">
+        <h1 class="sub-title">About Me</h1>
+        <div class="row">
+            <div class="About-col-1">
+                <img src="imgages/im1.jpeg" alt="Manju">
+            </div>
+            <div class="About-col-2">
+                <p>I am MANJU PEMMANAPUDI, a 3rd-year B.Tech student specializing in CSM AIML at MLRIT. I have an interest in computer science research, building polished projects, and enhancing portfolios. I have certifications like 'Python Zero to Hero,' attended workshops on GenAI, and work on competitive coding challenges. Additionally, I am part of a restaurant startup and focus on personal and professional development.</p>
+                
+                <!-- Tab navigation -->
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="openTab('Abilities')">Abilities</p>
+                    <p class="tab-links" onclick="openTab('Education')">Education</p>
+                </div>
+                
+                <!-- Tab contents -->
+                <div class="tab-contents active-tab" id="Abilities">
+                    <ul>
+                        <li><span>HTML:</span> Structure design for websites.</li>
+                        <li><span>Python:</span> Automation and AI solutions.</li>
+                        <li><span>Java:</span> Backend and enterprise applications.</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>B.Tech (2023-2026):</span> MLRIT College</li>
+                        <li><span>Diploma (2020-2023):</span> BSIT College</li>
+                        <li><span>10th Class (2019-2020):</span> ZPHS Miyapur</li>
+                    </ul>
+                </div>
+
+                <!-- Resume Download Button -->
+                <a href="Pemmanapudi Manju.Resume-1.pdf" download="Pemmanapudi_Manju_Resume.pdf" class="download-btn">Download Resume</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Skills Section -->
+<section id="skills" class="skills">
+    <h1 class="sub-title">My Skills</h1>
+    <ul>
+        <li><h3>Html</h3><span class="bar"><span class="html-bar">90%</span></span></li>
+        <li><h3>Css</h3><span class="bar"><span class="css-bar">70%</span></span></li>
+        <li><h3>Java</h3><span class="bar"><span class="java-bar">80%</span></span></li>
+        <li><h3>Python</h3><span class="bar"><span class="python-bar">75%</span></span></li>
+    </ul>
+</section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="row">
+                <div class="contact-left">
+                    <p><i class="fas fa-paper-plane"></i> manjumanjuqty@gmail.com</p>
+                    <p><i class="fas fa-phone-alt"></i> 7675850410</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/manju-pemmanapudi-321793338/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61572344271960" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://x.com/PManju1457217" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/manju_manju_qty7675/" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/Manju586" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Manju. Made with <i class="fas fa-heart"></i> By Easy Tutorials.</p>
+        </div>
+    </section>
+
+    <script>
+        // Function to switch tabs
+    function openTab(tabName) {
+        // Get all tab contents and hide them
+        var contents = document.querySelectorAll('.tab-contents');
+        contents.forEach(content => content.classList.remove('active-tab'));
+
+        // Get all tab links and remove the active class
+        var links = document.querySelectorAll('.tab-links');
+        links.forEach(link => link.classList.remove('active-link'));
+
+        // Show the selected tab content and highlight the active tab
+        document.getElementById(tabName).classList.add('active-tab');
+        var activeLink = document.querySelector(`[onclick="openTab('${tabName}')"]`);
+        activeLink.classList.add('active-link');
+    }
+    </script>
+</body>
+</html>

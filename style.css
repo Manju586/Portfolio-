@@ -1,0 +1,494 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: white;
+    text-transform: none;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+    position: relative;
+}
+
+header .logo {
+    font-size: 24px;
+    color: #ff004f;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px; /* Increased font size */
+    font-weight: 500;
+    padding: 10px 15px; /* Add spacing around each item */
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff004f;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+header nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+#menu {
+    display: flex;
+    gap: 20px;
+}
+
+#menu li a:hover {
+    color: #ff004f;
+}
+
+/* Header Content */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    height: calc(100vh - 80px); /* Adjust for navigation bar height */
+}
+
+.text-section {
+    max-width: 50%;
+}
+
+.text-section .subtitle {
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.text-section h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.text-section h2 {
+    font-size: 36px;
+    font-weight: 300;
+    color: #ff004f;
+}
+
+/* Image Section */
+.image-section img {
+    max-width: 450px; /* Set maximum width for the image */
+    width: 100%;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+    transform: scale(1.05);
+}
+
+.resume-button {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff004f;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #ff004f;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 10px rgba(255, 105, 180, 0.5);
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.About-col-1 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.About-col-1 img {
+    width: 65%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.About-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #ff004f;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* Skills Section */
+.skills {
+    width: 500px;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.skills ul {
+    list-style: none;
+}
+
+.skills li {
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.bar {
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.bar:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.bar span {
+    float: left;
+    background: linear-gradient(135deg, rgba(236, 0, 140, 1) 0%, rgba(252, 103, 103, 1) 100%);
+}
+
+.html-bar {
+    width: 90%;
+    animation: htmlAnim 3s;
+}
+
+.css-bar {
+    width: 70%;
+    animation: cssAnim 3s;
+}
+
+.java-bar {
+    width: 80%;
+    animation: javaAnim 3s;
+}
+
+.python-bar {
+    width: 75%;
+    animation: pythonAnim 3s;
+}
+
+@keyframes htmlAnim {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes cssAnim {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes javaAnim {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes pythonAnim {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 75%;
+    }
+}
+
+/* Contact Section */
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-bottom: 20px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin: 10px 20px; /* Adds space around the icons */
+    font-size: 25px;
+}
+
+
+.social-icons {
+    margin-top: 30px;
+}
+.social-icons a {
+    margin: 10px 15px; /* Adds space around each logo */
+    font-size: 30px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 80%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 10px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form button {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    background: #ff004f;
+    display: inline-block;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ff004f;
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i {
+    color: #ff004f;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #111;
+        border-radius: 5px;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .About-col-1 img {
+        width: 80%;
+    }
+}
+
+/* Active menu when clicking */
+#menu.active {
+    display: flex;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .item {
+    flex: 1 1 auto;
+    margin: 10px;
+  }
+  h1 {
+    font-size: 5vw; /* Adjusts the font size to fit the screen width */
+  }
+  
+  p {
+    margin: 5%; /* Adds proportional spacing */
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+  
+    .item {
+      width: 90%; /* Reduce item width for smaller screens */
+    }
+  
+    h1 {
+      font-size: 6vw; /* Reduce font size for mobile */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column; /* Stacks items vertically on small screens */
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  @media (max-width: 768px) {
+    nav {
+      display: none; /* Hide the full navigation menu */
+    }
+  
+    .hamburger {
+      display: block; /* Show hamburger icon */
+    }
+  }
+  
